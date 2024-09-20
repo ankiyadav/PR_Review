@@ -3,5 +3,6 @@ public class ClassPRReview {
         String newString = "This is just a example method";
         String newExampleString  = newString;
         System.out.println(newExampleString);
+        
     }
 }
