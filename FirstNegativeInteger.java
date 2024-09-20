@@ -9,14 +9,15 @@ public class FirstNegativeInteger {
     {
         List<Long> ans = new ArrayList<>();
         Queue<Long> q = new LinkedList<>();
-        int i=0, j=0;
+        int windowStart = 0;
+        int j=0;
         while(j < arr.length){
             if(arr[j] < 0){
                 q.offer(arr[j]);
             }
-            if(j-i+1 < k){
+            if(j-windowStart+1 < k){
                 j+= 1;
-            }else if(j-i+1== k){
+            }else if(j-windowStart+1== k){
 
                 if(q.size()>0){
                     ans.add(q.peek());
@@ -24,15 +25,15 @@ public class FirstNegativeInteger {
                     ans.add(0l);
                 }
 
-                if(q.size()>0 && arr[i] == q.peek()){
+                if(q.size()>0 && arr[windowStart] == q.peek()){
                     q.poll();
                 }
 
-                i++;
+                windowStart++;
                 j++;
             }
         }
-//    for getting the size of aray if it is required then n-k+1 is the size of the ans array can be remembered
+//    for gettwindowStartng the size of aray if it is required then n-k+1 is the size of the ans array can be remembered
         return ans.stream().mapToLong(e -> e).toArray();
     }
 
