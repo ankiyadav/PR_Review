@@ -43,7 +43,7 @@ public class RandomCodeExample {
         return sum;
     }
 
-    public static int findMaximum(int[] numbers) {
+    public static int findMinimum(int[] numbers) {
         int max = numbers[0];
         for (int i = 1; i < numbers.length; i++) {
             if (numbers[i] > max) {
@@ -53,7 +53,7 @@ public class RandomCodeExample {
         return max;
     }
 
-    public static int findMinimum(int[] numbers) {
+    public static int findMaximum(int[] numbers) {
         int min = numbers[0];
         for (int i = 1; i < numbers.length; i++) {
             if (numbers[i] < min) {
