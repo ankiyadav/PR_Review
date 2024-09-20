@@ -10,7 +10,7 @@ public class RandomCodeExample {
         System.out.println("Sum of numbers: " + sum);
 
         int max = findMaximum(numbers);
-        System.out.println("Maximum value: " + max);
+        System.out.println("Maximum value: " + findMaximum(numbers));
 
         int min = findMinimum(numbers);
         System.out.println("Minimum value: " + min);
